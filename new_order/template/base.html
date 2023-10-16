@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>simple order system </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'product' %}">Product</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'cartlist' %}">my cartlist</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    <li><h3>Welcome {{user.username}} !!</h3></li>
+                {% else %}
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

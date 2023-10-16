@@ -1,0 +1,13 @@
+1. There is two models (Product & order)
+2. Create super user and add product.
+3. Base page have option of product,register and login 
+
+4. Product will show all the product from product model and also add to cart button will show with each product.
+5. You have to be user to use add to cart function if you are not user it will redirect you to login page.
+6. after login you will be redirected to base page from where now you can use add to cart function.
+7. Your cart list will be shown after you add any product to your cart.
+8. you can check all of your cart and its status.
+
+9. for status i have used boolean field, and condition for pending and approved is false and true.
+10. add to cart button takes default false for status. so initially it will show pending on status of order.
+11. admin need to check order and click on status and save the order which will set status true then it will show approved on cartlist.
